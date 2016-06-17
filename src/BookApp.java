@@ -3,16 +3,27 @@
 public class BookApp {
 
 	public static void main(String[] args) {
+		
+		// test overloaded constructor
+		BookClass book2 = new BookClass();
+		book2.setTitle("Persuasion");
+		book2.setAuthor("Jane Austen");
+		book2.setDescription("Victorian novel");
+		
+		System.out.println(book2.getDisplayText()+"\n");
+		
+		
+		// create new book to test overloaded constructor
 		BookClass book = new BookClass("Farenheit 451", "Ray Bradbury", 
-				"futuristic novel set in totalitarian society");
+				"futuristic novel set in totalitarian society");	
 		
-		book.setInStock(true);
+		book.setInStock(true);	
 		
-		System.out.println(book.getDisplayText());
+		System.out.println(book.getDisplayText()+"\n");
 		
 		book.setPrice(25f);
 		
-		System.out.println("Price for 1 books: "
+		System.out.println("Price for 1 book: "
 				+BookFormatter.getFormattedPrice(book.getPrice(1)));
 		
 		System.out.println("Price for 4 books: "
