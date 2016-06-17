@@ -77,7 +77,7 @@ public class BookApp {
 		System.out.println("\nFound book: ");
 		System.out.println(retrievedBook.getDisplayText());
 		
-		// testBookClass();
+		testBookClass();
 
 	}
 
