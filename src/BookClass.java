@@ -1,6 +1,7 @@
 import java.text.NumberFormat;
 
 public class BookClass {
+	private String sku;
 	private String title;
 	private String author;
 	private String desc;
@@ -16,12 +17,18 @@ public class BookClass {
 		isInStock = false;
 	}
 
-	public BookClass(String title, String author, String desc) {
+	public BookClass(String sku, String title, String author, String desc) {
+		this.sku = sku;
 		this.title = title;
 		this.author = author;
 		this.desc = desc;
 	}
-
+	public void setSku(String sku) {
+		this.sku = sku;		
+	}
+	public String getSku() {
+		return this.sku;
+	}
 	public void setTitle(String title) {
 		this.title = title;
 	}
@@ -86,7 +93,7 @@ public class BookClass {
 	}
 
 	public String getDisplayText() {
-		return (this.title + " | " + this.author + " | " + this.desc);
+		return (this.sku + " | "+this.title + " | " + this.author + " | " + this.desc);
 	}
 
 }
